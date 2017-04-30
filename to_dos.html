@@ -4,6 +4,7 @@
         <title>
             Things to do
         </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" type="text/css" >
         <style type = "text/css">
             h1 {
                 color: blue;
@@ -42,19 +43,14 @@
             .school {
                 color:green;
             }
+            #magic{ 
+                display:none;
+            }
         </style>
    </head>
    <body>
        <h1> To dos </h1>
-       <div class="list">    
-            <ol>
-                <li>Make your bed</li>
-                <li>Eat breakfast</li>
-                <li class="school">Go to school</li>
-                <li>Do homework</li>
-                <li>Eat dinner</li>
-            </ol>  
-        </div>
+
         
         <form>
         <div class="inputbox inline">
@@ -67,7 +63,7 @@
         </button>
         </div>
         </form>
-        
+        <p></p>
         <form>
         <div class="inputbox inline">
             <label for="Name">
@@ -79,11 +75,45 @@
         </button>
         </div>
         </form>
+    <button id='trigger'>
+        Show to do list
         
+    </button>
+    <div id= "magic">
+            <div class="list">    
+                <ol>
+                    <li>Make your bed</li>
+                    <li>Eat breakfast</li>
+                    <li class="school">Go to school</li>
+                    <li>Do homework</li>
+                    <li>Eat dinner</li>
+                </ol>  
+            </div>
+        </div>
+        <script>
+        var isShowing = false;
+            document.addEventListener('click', function(e){
+                if (e.target.id==="trigger"){
+                    isShowing = !isShowing;
+                    if (isShowing){
+                        document.getElementById("magic").style .display ="block";
+                    } else{
+                         document.getElementById("magic").style.display = "none";
+                    }
+                }
+            });
+        </script>
+    </div>
         <a href = "new_todo.html">
             New todo
         </a>
 
         <img class="image" src="https://image.freepik.com/free-vector/people-doing-things_23-2147536320.jpg">
     </body>
+    
+    <table>
+        <tr>
+            <th> </th>
+        </tr>
+    </table>
 </html>
