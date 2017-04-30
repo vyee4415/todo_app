@@ -7,24 +7,45 @@
         <style type = "text/css">
             h1 {
                 color: blue;
+                border-bottom: 4px solid black;
+                padding: 5px;
             }
             body { 
-                background-color:orange;
+                background-color:#98fb98;
+            }
+            .list {
+                border: 2px solid black;
+                padding: 3px;
+                font-size:20px;
+                width:15%;
+                display:inline;
+            }
+            .inline {
+                display: inline;
             }
             .school {
                 color:green;
+            }
+            ol {
+                display: inline;
+            }
+            li {
+                display: block;
             }
         </style>
    </head>
    <body>
        <h1> To dos </h1>
-        <ol>
-            <li>Make your bed</li>
-            <li>Eat breakfast</li>
-            <li class="school">Go to school</li>
-            <li>Do homework</li>
-            <li>Eat dinner</li>
-        </ol>  
+       <div class="list inline">    
+            <ol>
+                <li>Make your bed</li>
+                <li>Eat breakfast</li>
+                <li class="school">Go to school</li>
+                <li>Do homework</li>
+                <li>Eat dinner</li>
+            </ol>  
+        </div>
+        <input class="inlcine" type="text"/>
         <a href = "new_todo.html">
             New todo
         </a>
