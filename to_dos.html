@@ -18,25 +18,35 @@
                 padding: 3px;
                 font-size:20px;
                 width:15%;
-                display:inline;
+                float:left;
+            }
+            .inputbox {
+                border-left:3px;
+                padding-left:4px;
+                margin:8px;
+            }
+            .image {
+                height:50%;
+                float:right;
+                margin-right:40px;
             }
             .inline {
                 display: inline;
             }
+            .block {
+                display: block;
+            }
+            .flex {
+                display:flex;
+            }
             .school {
                 color:green;
-            }
-            ol {
-                display: inline;
-            }
-            li {
-                display: block;
             }
         </style>
    </head>
    <body>
        <h1> To dos </h1>
-       <div class="list inline">    
+       <div class="list">    
             <ol>
                 <li>Make your bed</li>
                 <li>Eat breakfast</li>
@@ -45,9 +55,35 @@
                 <li>Eat dinner</li>
             </ol>  
         </div>
-        <input class="inlcine" type="text"/>
+        
+        <form>
+        <div class="inputbox inline">
+            <label for="Name">
+                enter a to-do
+            </label>
+        <input type="text"/> 
+        <button type="submit">
+            submit
+        </button>
+        </div>
+        </form>
+        
+        <form>
+        <div class="inputbox inline">
+            <label for="Name">
+                enter date due
+            </label>
+        <input type="date"/> 
+        <button type="submit">
+            submit
+        </button>
+        </div>
+        </form>
+        
         <a href = "new_todo.html">
             New todo
         </a>
+
+        <img class="image" src="https://image.freepik.com/free-vector/people-doing-things_23-2147536320.jpg">
     </body>
 </html>
